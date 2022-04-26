@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenCant{
+    width: 150px;
+    height: 60px;
+    padding: 10px;
+}
+
+.cantidad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5E1DA;
+    padding: 2px 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.658);
+}
+
+.cantidad h2{
+    color: #DD9078;
+    font-size: 17px;
+}
+
+.cont{
+    background-color: #F5E1DA;
+    border: none;
+    color: #DD9078;
+    font-size: 20px;
+}
+
+.btnAgregar{
+    background-color: #DD9078;
+    border: 1px solid white;
+    padding: 5px 22px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btnAgregar:hover{
+    background-color: #df7859;
+    transition: ease-in-out 0.7s;
+}

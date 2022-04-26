@@ -1,9 +1,15 @@
 import React from 'react';
 import "./ItemListContainer.css"
-function ItemListContainer(greeting) {
+import ItemCount from '../ItenCount/ItemCount';
+
+function ItemListContainer({greeting}) {
+    function prueba() {
+        console.log("Esta es una prueba")
+    }
     return (
         <div className='componentContainer'>
-            <p>Componente Contenedor</p>
+            <p>{greeting}</p>
+            <ItemCount inital={0} stock={5} onAdd={prueba} />
         </div>
     );
 }
