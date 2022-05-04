@@ -2,13 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItenCount/ItemCount';
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 
 function App() {
   return (
     <div className="App">
     <NavBar/>
-    <ItemListContainer greeting="Producto" />
+    {/* <ItemListContainer greeting="Producto" /> */}
+    <ItemDetailContainer />
     </div>
   );
 }
