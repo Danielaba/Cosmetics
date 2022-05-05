@@ -27,14 +27,16 @@
 
 <li>Productos</li>
 <p>
-    En la pestaña de productos, se encuentran tres tarjetas donde cada una de ellas contiene los productos, tienen un titulo donde se encuentra el nombre del producto seguido de una imagen, el precio y finalmente un boton de ver mas detalles, los estilos se relizaron por medio de CSS. <br/>
+    En la pestaña de productos, se encuentran tres tarjetas donde cada una de ellas contiene los productos, tienen un titulo donde se encuentra el nombre del producto seguido de una imagen, el precio y finalmente un boton de ver mas detalles, los estilos se relizaron por medio de CSS.
 
     Se realizo una promesa con un arreglo "productos" que posee tres objetos con las keys y los values que corresponden dependiendo del producto y se llamaron hacia la tarjeta, tambien se uso un hook de efecto para que funcione como filtro.
 </p>
 
 <li>Detalles del Producto</li>
 <p>
-    Al ver los detalles del producto se obseva la imagen de este y al lado la informacion correspondiente, los estilos que posee se realizaron mediante CSS, para direccionar a cada uno se hizo por medio de el id utilizando useParams de react-router-dom y se filtra por parametro. <br/>
+    Al ver los detalles del producto se obseva la imagen de este y al lado la informacion correspondiente, los estilos que posee se realizaron mediante CSS, para direccionar a cada uno se hizo por medio de el id utilizando useParams de react-router-dom y se filtra por parametro.
+
+    Se arelizo un botón contador para agregar el producto, este debe incrementar según el stock en este caso el stock pata todos los productos es 5 y tambien debe decrementar hasta 0.
 </p>
 </ul>
 
