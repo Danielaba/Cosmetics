@@ -11,7 +11,7 @@
 </p>
 
 <div>
-    <img src='./src/assets/img/detalle-productos.png'></img>
+    <img src='./src/assets/img/detalle-producto.png'></img>
 </div>
 
 <p>
