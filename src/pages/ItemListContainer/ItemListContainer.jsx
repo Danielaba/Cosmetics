@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import "./ItemListContainer.css";
 // import ItemCount from '../ItenCount/ItemCount';
-import Item from "../Item/Item";
-import ItemList from "../ItemList/ItemList";
+import Item from "../../components/Item/Item";
+import ItemList from "../../components/ItemList/ItemList";
+import { useParams } from 'react-router-dom';
 
-function traerProductos() {
+function traerProductos( category ) {
     const myPromise = new Promise((resolve, reject) => {
         const productos = [
             {
                 id: 1,
                 title: "Pestañina",
                 price: "$15.000",
+                stock: 5,
+                category: "cosmeticos",
                 imageUrl: "https://www.tiendadelabelleza.co/wp-content/uploads/2016/11/PESTANINA-VITAMINA-E-VOLUMEN-NEGRA-VITU.jpg"
             },
             {
                 id: 2,
                 title: "Base",
                 price: "$40.000",
+                stock: 5,
+                category: "cosmeticos",
                 imageUrl: "https://www.purpuremakeup.com/wp-content/uploads/2020/02/natural.jpg"
             },
     
@@ -24,12 +29,15 @@ function traerProductos() {
                 id: 3,
                 title: "Colorete",
                 price: "$12.000",
+                stock: 5,
+                category: "cosmeticos",
                 imageUrl: "https://lbel.tiendabelcorp.com/cdn-cgi/image/width=1200,fit=contain,f=auto/https://belc-bigdata-mdm-images-prd.s3.amazonaws.com/images/FotoProductoFondoBlancoWebRedes/200084962_producto_rouge_lintense_labial_barra_rouge.jpg"
             }
         ];
 
+        const productoFiltrado = category ? productos.filter(p => p.category === category) : productos;
         setTimeout(() => {
-            resolve(productos);
+            resolve(productoFiltrado);
         }, 2000);
     })
     return myPromise;
@@ -43,14 +51,19 @@ function ItemListContainer({greeting}) {
     //  }
 
     const [products, setProducts] = useState([]);
+    const { categoryId } =useParams();
  
     useEffect(() => {
-        traerProductos()
+        traerProductos(categoryId)
+
         .then( res => {
             setProducts(res);
+        })
+        .catch(err => {
+            console.log(err);
         });
         
-    }, [])
+    }, [categoryId])
 
     return (
         <div className='componentContainer'>

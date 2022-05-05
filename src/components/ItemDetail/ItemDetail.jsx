@@ -14,7 +14,7 @@ function ItemDetail({ item }) {
                     <h2 className='titulo'>{ item?.title }</h2>
                     <p className='precio'>{ item?.price }</p>
                     <div>
-                        <ItemCount inital={0} stock={5} onAdd={() => {}} />
+                        <ItemCount inital={0} stock={ item?.stock } onAdd={() => {}} />
                     </div>
                 </div>
             </div>

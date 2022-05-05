@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+<h1>E-Commerce de cosmeticos</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div>
+    <img src='./src/assets/img/productos.png'></img>
+</div>
 
-## Available Scripts
+<h2>Resumen</h2>
 
-In the project directory, you can run:
+<p>
+    El e-commerce cuenta con una vista de los productos que contiene, al dar click en "Ver Detalle" se dirige a los detalles del producto y se direcciona segun el id del mismo.
+</p>
 
-### `npm start`
+<div>
+    <img src='./src/assets/img/detalle-productos.png'></img>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>
+    Cuenta con un nav horizontal donde se puede navegar las diferentes vistas del sitio web, sin embargo en este momento el unico que esta direccionado es la opcion "Productos".
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Detalles</h2>
+<ul>
+<li>Menu de opciones</li>
+<p>
+    Cuenta con el nombre del sitio web, las opciones y un icono de carrito de compras, en cuanto a los estilos se realizaron por medio de CSS.
+</p>
 
-### `npm test`
+<li>Productos</li>
+<p>
+    En la pestaña de productos, se encuentran tres tarjetas donde cada una de ellas contiene los productos, tienen un titulo donde se encuentra el nombre del producto seguido de una imagen, el precio y finalmente un boton de ver mas detalles, los estilos se relizaron por medio de CSS. <br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Se realizo una promesa con un arreglo "productos" que posee tres objetos con las keys y los values que corresponden dependiendo del producto y se llamaron hacia la tarjeta, tambien se uso un hook de efecto para que funcione como filtro.
+</p>
 
-### `npm run build`
+<li>Detalles del Producto</li>
+<p>
+    Al ver los detalles del producto se obseva la imagen de este y al lado la informacion correspondiente, los estilos que posee se realizaron mediante CSS, para direccionar a cada uno se hizo por medio de el id utilizando useParams de react-router-dom y se filtra por parametro. <br/>
+</p>
+</ul>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2>Direccionamiento de rutas</h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<ul>
+<li>/</li>
+<p>
+    Direcciona a ItemListContainer, alli es donde se encuentran los productos que contiene el e-commerce.
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<li>/categoria/:id</li>
+<p>
+    Direcciona a ItemListContainer, alli es donde se encuentran los productos que contiene el e-commerce.
+</p>
 
-### `npm run eject`
+<li>/item/:id</li>
+<p>
+    Direcciona a ItemDetailContainer, alli es donde se encuentran los detalles de los productos que contiene el e-commerce.
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</ul>
