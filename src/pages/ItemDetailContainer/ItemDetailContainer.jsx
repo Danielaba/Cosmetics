@@ -59,6 +59,7 @@ function ItemDetailContainer() {
     return (
         <div>
             <ItemDetail item={item}/>
+            
         </div>
     );
 }

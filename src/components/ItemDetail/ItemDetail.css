@@ -45,3 +45,25 @@
     font-size: 20px;
     text-shadow: 2px 2px 10px #494D4E;
 }
+
+.btn-cant{
+    background-color: #DD9078;
+    border: 1px solid white;
+    padding: 5px 22px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn-cant:hover{
+    background-color: #df7859;
+    transition: ease-in-out 0.7s;
+}
+
+.cant-products{
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    padding: 7px 20px;
+}

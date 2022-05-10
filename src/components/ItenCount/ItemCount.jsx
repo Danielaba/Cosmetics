@@ -20,10 +20,11 @@ function ItemCount({stock, inital, onAdd}) {
         <div className='contenCant'>
             <div className='cantidad'>
                 <button onClick = { ()=> disminuir()} className="cont"> - </button>
-                <h2>{ count }</h2>
+                {/* <input readOnly value={count} /> */}
+                 <h2>{ count }</h2>
                 <button onClick = { ()=> aumentar()} className="cont"> + </button>
             </div>
-            <button onClick={()=> (count <= stock) && onAdd()} className="btnAgregar">Agregar al carrito</button>
+            <button onClick={()=> (count <= stock) && onAdd(count)} className="btnAgregar">Agregar al carrito</button>
         </div>
     );
 }
