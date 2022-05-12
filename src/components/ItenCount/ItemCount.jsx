@@ -20,7 +20,6 @@ function ItemCount({stock, inital, onAdd}) {
         <div className='contenCant'>
             <div className='cantidad'>
                 <button onClick = { ()=> disminuir()} className="cont"> - </button>
-                {/* <input readOnly value={count} /> */}
                  <h2>{ count }</h2>
                 <button onClick = { ()=> aumentar()} className="cont"> + </button>
             </div>

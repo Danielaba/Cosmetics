@@ -4,6 +4,7 @@ import "./ItemListContainer.css";
 import Item from "../../components/Item/Item";
 import ItemList from "../../components/ItemList/ItemList";
 import { useParams } from 'react-router-dom';
+import CartContext from '../../store/CartContext';
 
 function traerProductos( category ) {
     const myPromise = new Promise((resolve, reject) => {
@@ -52,7 +53,7 @@ function ItemListContainer({greeting}) {
 
     const [products, setProducts] = useState([]);
     const { categoryId } =useParams();
- 
+
     useEffect(() => {
         traerProductos(categoryId)
 

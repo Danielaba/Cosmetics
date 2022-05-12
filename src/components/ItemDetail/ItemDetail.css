@@ -67,3 +67,24 @@
     text-decoration: none;
     padding: 7px 20px;
 }
+
+
+.botones{
+    background-color: #dd9078c9;
+    border: 1px solid white;
+    padding: 5px 22px;
+    color: white;
+    margin: 5px 3px;
+    border-radius: 5px;
+}
+
+.conten-botones{
+    border-top: 2px solid #DD9078;
+    padding-top: 15px;
+}
+
+.botones:hover{
+    background-color: #df7859;
+    transition: ease-in-out 0.7s;
+    box-shadow: 1px 1px 10px rgb(63, 63, 63);
+}
