@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carrito from "../../assets/img/Carrito.png"
 import "./CartWidget.css"
-function CartWidget(props) {
+
+
+function CartWidget() {
     return (
         <div>
-            <img src={Carrito} alt="" className='carrito' />
+            <Link to='/cart'> <img src={Carrito} alt="" className='carrito' /></Link>
         </div>
     );
 }
