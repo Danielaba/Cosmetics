@@ -3,6 +3,7 @@ import CartItem from '../../components/CartItem/CartItem';
 import { Link } from 'react-router-dom';
 import CartContext from '../../store/CartContext';
 import "./Cart.css"
+import Checkout from '../../components/Checkout/Checkout';
 
 function Cart() {
     const cartCtx = useContext(CartContext);
@@ -13,7 +14,10 @@ function Cart() {
             {cartCtx.products.length !== 0 ?
             <div>
                 <p>Precio total: ${cartCtx.getTotalPrice()}</p>
+                <Link to= '/checkout'>
                 <button className='btn'>Terminar compra</button>
+                </Link>
+                
             </div>:
             <>
             <h2>No hay productos en el carrito</h2>

@@ -10,7 +10,6 @@ const CartContext = createContext({
     getTotalPrice: ()=> {}
 });
 
-
 export const CartContextProvider = ({ children }) => {
     const [productList, setProductList] = useState([]);
 
@@ -51,8 +50,7 @@ export const CartContextProvider = ({ children }) => {
             return total + value.price*value.quantity
         }, 0)
     }
-
-
+    
     return (
         <CartContext.Provider value = {{
             products: productList,

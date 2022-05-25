@@ -19,7 +19,6 @@ function NavBar(props) {
         getCategories()
         .then(snapshot => {
             const categories = snapshot.docs.map(doc => doc.data().category);
-            console.log(categories);
             setCategories = (categories);
         })
     }, []);
