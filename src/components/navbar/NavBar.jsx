@@ -4,11 +4,11 @@ import "./navbar.css"
 import CartWidget from '../CartWidget/CartWidget';
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 
-function getCategories () {
+function getCategories() {
     const db = getFirestore();
     const itemCollection = collection(db, "items");
 
-    return  getDocs (itemCollection);
+    return getDocs(itemCollection);
 }
 
 function NavBar(props) {
@@ -17,22 +17,22 @@ function NavBar(props) {
 
     useEffect(() => {
         getCategories()
-        .then(snapshot => {
-            const categories = snapshot.docs.map(doc => doc.data().category);
-            setCategories = (categories);
-        })
+            .then(snapshot => {
+                const categories = snapshot.docs.map(doc => doc.data().category);
+                setCategories = (categories);
+            })
     }, []);
 
     return (
-        <div className='nav'>
-            <Link to="/" className='logo'><h1>Cosmetics</h1></Link> 
-            <ul className='menu'>
-                <li><NavLink to="/categoria/ojos" className={nav => nav.isActive ? "nav-active": ""}>Ojos</NavLink></li>
-                <li><NavLink to="/categoria/piel" className={nav => nav.isActive ? "nav-active": ""}>Piel</NavLink></li>
-                <li><NavLink to="/categoria/labios" className={nav => nav.isActive ? "nav-active": ""}>Labios</NavLink></li>
-            </ul>
-            <CartWidget />
-        </div>
+            <div className='nav'>
+                <Link to="/" className='logo'><h1>Cosmetics</h1></Link>
+                <ul className='menu'>
+                    <li><NavLink to="/categoria/ojos" className={nav => nav.isActive ? "nav-active" : ""}>Ojos</NavLink></li>
+                    <li><NavLink to="/categoria/piel" className={nav => nav.isActive ? "nav-active" : ""}>Piel</NavLink></li>
+                    <li><NavLink to="/categoria/labios" className={nav => nav.isActive ? "nav-active" : ""}>Labios</NavLink></li>
+                </ul>
+                <CartWidget />
+            </div>
     );
 }
 

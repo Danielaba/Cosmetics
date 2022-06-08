@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./ItemListContainer.css";
-// import ItemCount from '../ItenCount/ItemCount';
-import Item from "../../components/Item/Item";
 import ItemList from "../../components/ItemList/ItemList";
 import { useParams } from 'react-router-dom';
-import CartContext from '../../store/CartContext';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 function traerProductos(category) {
