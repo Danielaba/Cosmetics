@@ -55,6 +55,8 @@
     <img src='./src/assets/img/form.png'></img>
 </div>
 
+<li>Funcionamiento del sitio web</li>
+<a href="https://www.youtube.com/watch?v=eI5rPtKebuA">Ver demostracion</a>
 </ul>
 
 <h2>Direccionamiento de rutas</h2>
@@ -75,6 +77,5 @@
     Direcciona a ItemDetailContainer, alli es donde se encuentran los detalles de los productos que contiene el e-commerce.
 </p>
 
-<li>Funcionamiento del sitio web</li>
-[![Alt text](https://img.youtube.com/vi/eI5rPtKebuA/0.jpg)](https://www.youtube.com/watch?v=eI5rPtKebuA)
+
 </ul>
